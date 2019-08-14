@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    require_once __DIR__ . '/functions.php';;
+    require_once __DIR__ . '/functions.php';
     
     echo getGenderOfName('Angel');
     echo '<br>';
