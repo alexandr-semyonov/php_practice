@@ -13,6 +13,8 @@
     echo getGenderOfName('Angel');
     echo '<br>';
     echo getGenderOfName('Mike');
+    echo '<br>';
+    echo getGenderOfName('angel');
 
     ?>
 </body>
