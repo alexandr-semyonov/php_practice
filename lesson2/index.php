@@ -12,8 +12,19 @@
 
     <div class="container">
         <div class="row">
+            <div class="col">                
+            <h1>Lesson 2 PHP</h1>
+                <h2>Anchors on files</h2>
+                <ul class="list-of-anchors">
+                <li><a href="discriminant.php">discriminant.php</a></li>
+                <li><a href="genderofname.php">genderofname.php</a></li>
+                <li><a href="tableoftrue.php">tableoftrue.php</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
-                <h1>Lesson 2 PHP</h1>
+                <h2>Collapse buttons</h2>
                 <ul class="solutions">
                     <li><a class="btn btn-primary" data-toggle="collapse" href="#collapseDiscriminant" role="button" aria-expanded="false" aria-controls="collapseDiscriminant">Quadratic Solution</a></li>
                     <li><a class="btn btn-primary" data-toggle="collapse" href="#collapseGenderByName" role="button" aria-expanded="false" aria-controls="collapseGenderByName">Gender by name</a></li>

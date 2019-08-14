@@ -16,8 +16,13 @@
     width: 40%;
 }
 
+.list-of-anchors{
+    margin-bottom: 30px;
+}
+
 .solutions{
     list-style-type: none;
+    margin-bottom: 30px;
 }
 
 .solutions li{    
