@@ -10,7 +10,9 @@
     <?php
         $funcDir = __DIR__ . '/functions.php';
         require_once $funcDir;
-        showDiscriminant( 2, 4, -12);
+        showQuadraticSolution( 1, 2, 1);
+        showQuadraticSolution( 2, 4, 4);
+        showQuadraticSolution( 4, 4, 0);
         '<br>';
         echo 'functions.php directory is - <br>' . $funcDir;
     ?>
