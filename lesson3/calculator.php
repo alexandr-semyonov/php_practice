@@ -7,7 +7,7 @@
   <title>Calculator</title>
 </head>
 <body>
-  <form action="calc.php" method="get">
+  <form action="" method="get">
     Num1<input type="text" name="num1">
     &nbsp
     <select name ="operation">
@@ -17,6 +17,12 @@
     &nbsp
     Num2<input type="text" name="num2">
     <button type="submit">Done!</button>
+    <input type="text" name="res" disabled value="
+    <?php 
+      if isset($_GET[$res]){
+          echo 
+      } 
+    ?>">
   </form>
 </body>
 </html>
