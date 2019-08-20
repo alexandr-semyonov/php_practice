@@ -1,3 +1,9 @@
 First comment in bookENDOF
 Second comment in guest bookENDOF
 Third comment in guest bookENDOF
+4 recordENDOF
+5 recordENDOF
+6 recordENDOF
+56ENDOF
+8 recordENDOF
+Дз сделано! Ура!ENDOF

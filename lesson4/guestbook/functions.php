@@ -5,8 +5,5 @@ function readFromData(){
   $str = file_get_contents($pathToData);
   $arrOfstr = explode('ENDOF', $str);
   array_pop($arrOfstr);
-  var_dump ($arrOfstr);
+  return $arrOfstr;
 }
-
-readFromData();
-
