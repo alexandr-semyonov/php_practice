@@ -17,6 +17,8 @@
         $info = finfo_file($finfo ,__DIR__ . '/screen.png');
         echo $info;
         finfo_close($finfo);
+        echo '<br>';
+        echo $info;
     ?>
 </body>
 </html>
