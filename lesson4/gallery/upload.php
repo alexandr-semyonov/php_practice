@@ -2,11 +2,10 @@
 if ( isset($_FILES['myimg']) ) {
     if (0 == $_FILES['myimg']['error']) {
         $uploadedFile = $_FILES['myimg']['tmp_name'];
-        $finfo = finfo_open(FILEINFO_NONE);
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
         $info = finfo_file($finfo , $uploadedFile);
         finfo_close($finfo);
-        $infoArr = explode(',' , $info);
-        if ('JPEG image data' == $infoArr[0] || 'PNG image data' == $infoArr[0] ){
+        if ('image/jpeg' == $info || 'image/png' == $info ){
             $fileName = $_FILES['myimg']['name'];        
             if (file_exists( __DIR__ . '/img' . '/' . $fileName )){
                 $fileName = explode('.',$fileName);

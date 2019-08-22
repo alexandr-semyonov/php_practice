@@ -8,12 +8,12 @@
 </head>
 <body>
     <?php
-        $finfo = finfo_open(FILEINFO_NONE);
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
         $info = finfo_file($finfo ,__DIR__ . '/1000.jpg');
         echo $info;
         finfo_close($finfo);
         echo '<br>';
-        $finfo = finfo_open(FILEINFO_NONE);
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
         $info = finfo_file($finfo ,__DIR__ . '/screen.png');
         echo $info;
         finfo_close($finfo);
