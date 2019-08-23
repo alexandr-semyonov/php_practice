@@ -17,14 +17,21 @@ if ($currentUser){
 </head>
 <body>
     <a href="./index.php">Home page</a>
+    <br>
+    <br>
+    <div>
     <form action="./loginfailed.php" method="post">
         <label>
         Enter login
+            <br>
         <input type="text" name="login">
+            <br>
         </label>
         <label>
         Enter password
+            <br>
         <input type="password" name="password">
+            <br>
         </label>
         <br><br>
         <button type="submit">Login</button>
