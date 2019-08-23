@@ -42,3 +42,4 @@ assert (  'Mike - is a woman' !== getGenderOfName ('mike') );
 assert (  'Mike - is woman' !== getGenderOfName ('Mike') );
 assert (  'Angel - is a woman' == getGenderOfName ('angel') );
 assert (  'Maria - is a woman' == getGenderOfName ('Maria') );
+
