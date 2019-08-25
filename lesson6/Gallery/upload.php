@@ -1,9 +1,11 @@
 <?php
 session_start();
 require_once __DIR__ . '/functions.php';
+require_once __DIR__ . '/Classes/Uploader.php';
+$uploader = new Uploader('myimg');
 $currentUser = getCurrentUser();
 if ($currentUser){
-    if ( isset($_FILES['myimg']) ) {
+    if ( $uploader->isUploaded() ) {
         if (0 == $_FILES['myimg']['error']) {
             $uploadedFile = $_FILES['myimg']['tmp_name'];
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
@@ -16,10 +18,7 @@ if ($currentUser){
                     $fileName[0] = $fileName[0] . 'x' .rand(0, 999);
                     $fileName = implode('.', $fileName);
                 }
-                move_uploaded_file(
-                    $_FILES['myimg']['tmp_name'],
-                    __DIR__ . '/img' . '/' . $fileName
-                );
+                $uploader->upload(__DIR__ . '/img' . '/', $fileName);
                 makeRecordInLog($currentUser, 'upload', $fileName);
             } else {
                 makeRecordInLog($currentUser, 'uploadfail', $info);
