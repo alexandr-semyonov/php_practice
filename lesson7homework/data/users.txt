@@ -1,2 +1,0 @@
-admin:$2y$10$DwPEZqQUG.6GEbyBcbfWpuvYuEjeKCa5uLGxX4UvrZ0vZTqZFiQga
-user:$2y$10$JgyjvP2MUCrpOfZad4okD.pSfP/mM2QFC5RIChAI1r1PqbUMyOQ2S
