@@ -12,7 +12,9 @@ class UsersList
       $this->path = __DIR__ . '/../users.txt';
       $usersLines = file($this->path, FILE_IGNORE_NEW_LINES);
       foreach ($usersLines as $userLine){
-          
+        $line = (explode(':', $userLine));
+        $password = str_replace("\r\n", "", $line[1]);
+        $user = $line[0];
           //$this->usersList[] = new User($user);
       }
   }
