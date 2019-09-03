@@ -6,17 +6,6 @@ class UsersList
 {
   protected $path;
   protected $usersList = [];
-  protected $currentUser = NULL;
-
-  public function existsUser($login)
-  {
-    for ($i = 0; $i < count($this->usersList); $i++) {
-      if ($this->usersList[$i]->getUserName() == $login) {
-        return true;
-      }
-    }
-    return false;
-  }
 
   public function __construct()
   {
@@ -28,14 +17,18 @@ class UsersList
       $userName = $line[0];
       $this->usersList[] = new User($userName, $password);
     }
-    if ($this->checkPassword($_POST['login'], $_POST['password'])) {
-      if ($this->existsUser($_SESSION['user'])) {
-        $_SESSION['user'] = $_POST['login'];
-        $this->currentUser = $_SESSION['user'];
-    }
-    }
+
   }
 
+  public function existsUser($login)
+  {
+    for ($i = 0; $i < count($this->usersList); $i++) {
+      if ($this->usersList[$i]->getUserName() == $login) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   public function checkPassword($login, $password)
   {
