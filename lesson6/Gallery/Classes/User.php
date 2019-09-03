@@ -3,11 +3,11 @@
 
 class User
 {
-    protected $userName;
+    protected $user;
     protected $password;
-    public function __construct($userName, $password)
+    public function __construct($user, $password)
     {
-        $this->userName = $userName;
+        $this->user = $user;
         $this->password = $password;
     }
 

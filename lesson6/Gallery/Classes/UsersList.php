@@ -6,7 +6,6 @@ class UsersList
 {
   protected $path;
   protected $usersList = [];
-  protected $userNames = [];
 
   public function __construct()
   {
@@ -15,28 +14,8 @@ class UsersList
       foreach ($usersLines as $userLine){
         $line = (explode(':', $userLine));
         $password = str_replace("\r\n", "", $line[1]);
-        $userName = $line[0];
-        $this->usersList[] = new User($userName, $password);
-        $this->userNames[] = $userName;
+        $user = $line[0];
+          //$this->usersList[] = new User($user);
       }
   }
-
-  public function getUserNames()
-  {
-    return $this->userNames;
-  }
-
-  public function existsUser($login){
-    return in_array($login, $this->getUserNames());
-  }
-
-  public function getUsersList()
-  {
-    return $this->usersList;
-  }
-  function checkPassword($login, $password){
-    $users = getUsersList();
-    return password_verify($password, $users[$login]);
-  }
-
 }

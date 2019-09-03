@@ -8,7 +8,7 @@ if (isset($_POST['login']) && isset($_POST['password'])){
             $currentUser = getCurrentUser();
             if ($currentUser){
                 makeRecordInLog($currentUser, 'login');
-                header('location: ./');
+                header('location: index.php');
             }
         }
     }
