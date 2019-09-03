@@ -9,10 +9,10 @@ class UsersList
 
   public function __construct()
   {
-      $this->path = __DIR__ . '/../users.txt';
-      $users = file($this->path, FILE_IGNORE_NEW_LINES);
-      foreach ($users as $user){
-          $this->usersList[] = new User($user);
+      $this->path = __DIR__ . '/../data.txt';
+      $lines = file($this->path, FILE_IGNORE_NEW_LINES);
+      foreach ($lines as $line){
+          $this->usersList[] = new GuestBookRecord($line);
       }
   }
 }
