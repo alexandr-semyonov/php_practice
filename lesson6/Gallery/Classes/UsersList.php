@@ -6,6 +6,7 @@ class UsersList
 {
   protected $path;
   protected $usersList = [];
+  protected $currentUser = NULL;
 
   public function __construct()
   {
@@ -17,7 +18,9 @@ class UsersList
       $userName = $line[0];
       $this->usersList[] = new User($userName, $password);
     }
-
+    if ($this->existsUser($_SESSION['user'])) {
+      $this->currentUser = $_SESSION['user'];
+    }
   }
 
   public function existsUser($login)

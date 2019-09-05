@@ -1,11 +1,13 @@
 <?php
+require_once __DIR__ . '/Classes/UsersList.php';
+$userList = new UsersList();
 session_start();
 require_once __DIR__ . '/functions.php';
 if (isset($_POST['login']) && isset($_POST['password'])){
     if (existsUser($_POST['login'])){
         if (checkPassword($_POST['login'], $_POST['password'])){
             $_SESSION['user'] = $_POST['login'];
-            $currentUser = getCurrentUser();
+            $currentUser = $userList->getCurrentUser();
             if ($currentUser){
                 makeRecordInLog($currentUser, 'login');
                 header('location: index.php');
