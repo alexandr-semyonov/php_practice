@@ -1,5 +1,5 @@
 <?php
-
+/*
 function getUsersList(){
     $usersList = file(__DIR__ . '/users.txt');
     $usersArr = [];
@@ -19,17 +19,15 @@ function existsUser($login){
 function checkPassword($login, $password){
     $users = getUsersList();
     return password_verify($password, $users[$login]);
-}
+}*/
 
 function getCurrentUser(){
     if (isset($_SESSION['user'])){
-        if (existsUser($_SESSION['user'])){
             $currentUser = $_SESSION['user'];
             return $currentUser;
-        }
-    };
+    }
     return null;
-};
+}
 
 function makeRecordInLog($currentUser, $message, $file = ''){
     $pathToLog = __DIR__ . '/log.txt';

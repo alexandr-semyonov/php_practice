@@ -4,10 +4,10 @@ $userList = new UsersList();
 session_start();
 require_once __DIR__ . '/functions.php';
 if (isset($_POST['login']) && isset($_POST['password'])){
-    if (existsUser($_POST['login'])){
-        if (checkPassword($_POST['login'], $_POST['password'])){
+    if ($userList->existsUser($_POST['login'])){
+        if ($userList->checkPassword($_POST['login'], $_POST['password'])){
             $_SESSION['user'] = $_POST['login'];
-            $currentUser = $userList->getCurrentUser();
+            $currentUser = getCurrentUser();
             if ($currentUser){
                 makeRecordInLog($currentUser, 'login');
                 header('location: index.php');
