@@ -7,7 +7,8 @@ if (isset($_POST['login']) && isset($_POST['password'])){
     if ($userList->existsUser($_POST['login'])){
         if ($userList->checkPassword($_POST['login'], $_POST['password'])){
             $_SESSION['user'] = $_POST['login'];
-            $currentUser = getCurrentUser();
+            $currentUser = $userList->getCurrentUser();
+            //echo $currentUser;
             if ($currentUser){
                 makeRecordInLog($currentUser, 'login');
                 header('location: ./');

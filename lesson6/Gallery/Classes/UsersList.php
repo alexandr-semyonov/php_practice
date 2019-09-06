@@ -40,4 +40,12 @@ class UsersList
     }
     return false;
   }
+
+  public function getCurrentUser(){
+    if (isset($_SESSION['user'])){
+            $currentUser = $_SESSION['user'];
+            return $currentUser;
+    }
+    return null;
+  }
 }

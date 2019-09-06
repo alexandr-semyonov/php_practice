@@ -1,9 +1,11 @@
 <?php
 session_start();
 require_once __DIR__ . '/functions.php';
-$currentUser = getCurrentUser();
+require_once __DIR__ . '/Classes/UsersList.php';
+$userList = new UsersList();
+$currentUser = $userList->getCurrentUser();
 if ($currentUser){
-    header('location: index.php');
+    header('location: ./');
 }
 ?>
 <!doctype html>
