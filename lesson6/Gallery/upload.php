@@ -2,8 +2,10 @@
 session_start();
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/Classes/Uploader.php';
+require_once __DIR__ . '/Classes/UsersList.php';
+$userList = new UsersList();
 $uploader = new Uploader('myimg');
-$currentUser = getCurrentUser();
+$currentUser = $userList->getCurrentUser();
 if ($currentUser){
     if ( $uploader->isUploaded() ) {
         if (0 == $_FILES['myimg']['error']) {
