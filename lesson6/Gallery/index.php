@@ -10,16 +10,7 @@ require_once __DIR__ . '/functions.php';
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery with login and upload</title>
-    <style>
-        ul{
-            margin: 0;
-            padding: 0;
-        }
-        .gallery li{
-            display: inline-block;
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <h2>Hello <?php
