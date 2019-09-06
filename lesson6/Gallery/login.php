@@ -18,7 +18,7 @@ if ($currentUser){
     <title>Document</title>
 </head>
 <body>
-    <a href="./index.php">Home page</a>
+    <a href="./">Home page</a>
     <br>
     <br>
     <div>
