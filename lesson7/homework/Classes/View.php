@@ -10,8 +10,8 @@ class View
     $this->data[$name] = $value;
   }
 
-  public function display($template)
+  public function display()//$template = ''
   {
-    # include
+    return include __DIR__ . '';
   }
 }
