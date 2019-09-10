@@ -2,9 +2,9 @@
 
 
 class View
-{ 
+{
   protected $data = [],
-  $template;
+    $template;
 
   public function assign(string $name, object $value)
   {
@@ -12,19 +12,14 @@ class View
     return $this;
   }
 
-  public function getData()
-  {
-    return $this->data;
-  }
-
   public function render(string $template)
   {
     ob_start();
     $data = $this->data[$template];
-    if ($template == 'guestbook'){
+    if ($template == 'guestbook') {
       $template = 'index';
     }
-    require_once __DIR__ . './../templates/'. $template .'.php';
+    require_once __DIR__ . './../templates/' . $template . '.php';
     $this->template = ob_get_clean();
     return $this;
   }
