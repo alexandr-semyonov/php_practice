@@ -20,7 +20,7 @@ class View
   public function render(string $template)
   {
     ob_start();
-    $data = $this->getData()[$template];
+    $data = $this->data[$template];
     if ($template == 'guestbook'){
       $template = 'index';
     }
