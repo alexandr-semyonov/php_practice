@@ -4,6 +4,4 @@
    
     $guestBook = new GuestBook();
     $view = new View();
-    $view->assign('guestbook', $guestBook);
-    //$view->display();
-    include __DIR__ . './templates/index.php';
+    $view->assign('guestbook', $guestBook)->render('guestbook')->display();

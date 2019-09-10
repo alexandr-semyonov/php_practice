@@ -13,14 +13,12 @@
     </style>
 </head>
 <body>
-
-
 <div class="container">
     <div class="row">
         <div class="col">
     <ol>
         <?php
-            foreach ($guestBook->getRecords() as $record){ ?>
+            foreach ($data->getRecords() as $record){ ?>
                 <li>
                 <?php echo $record->getMessage(); ?>
                     <hr>
