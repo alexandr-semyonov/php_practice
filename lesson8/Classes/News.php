@@ -10,8 +10,8 @@ class News
     {   
         $db = new Db;
         $sql = 'SELECT * FROM news ORDER BY id DESC';
-        $data = [':id' => $_GET['id']];
-        $data = $db->query($sql, $data);
+        //$data = [':id' => $_GET['id']];
+        $data = $db->query($sql);
         $this->data = $data;
     }
 

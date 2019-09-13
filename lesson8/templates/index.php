@@ -8,7 +8,7 @@
 </head>
 <body>
   <?php
-  foreach($data->getNews() as $record){ ?>
+  foreach($this->data['news']->getNews() as $record){ ?>
   <article>
   <h2><a href="article.php?id=<?php echo $record['id'] ?> "><?php echo $record['заголовок'] ?></a></h2>
     <p><?php echo $record['текст'] ?></p>
