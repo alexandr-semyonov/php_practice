@@ -13,10 +13,5 @@
     <p><?php echo $this->data['article']->getArticle()['текст'] ?></p>
     <cite><?php echo $this->data['article']->getArticle()['автор'] ?></cite>
   </article>
-
-  
-  <?php //$record = $data->getArticle();
-    var_dump($this);
-  ?>
 </body>
 </html>
