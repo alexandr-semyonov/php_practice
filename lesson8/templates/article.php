@@ -7,12 +7,16 @@
   <title>News</title>
 </head>
 <body>
-  <a href="index.php">Back</a> 
+  <a href="index.php">Back</a>
   <article>
-  <?php $record = $data->getArticle()?>
-  <h2><?php echo $record['заголовок'] ?></h2>
-    <p><?php echo $record['текст'] ?></p>
-    <cite><?php echo $record['автор'] ?></cite>
+  <h2><?php echo $this->data['article']->getArticle()['заголовок'] ?></h2>
+    <p><?php echo $this->data['article']->getArticle()['текст'] ?></p>
+    <cite><?php echo $this->data['article']->getArticle()['автор'] ?></cite>
   </article>
+
+  
+  <?php //$record = $data->getArticle();
+    var_dump($this);
+  ?>
 </body>
 </html>
