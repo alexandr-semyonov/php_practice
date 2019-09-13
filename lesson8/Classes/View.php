@@ -15,7 +15,6 @@ class View
   public function render(string $template)
   {
     ob_start();
-    $data = $this->data[$template];
     if ($template == 'news') {
       $template = 'index';
     }
@@ -27,5 +26,6 @@ class View
   public function display()
   {
     echo $this->template;
+    return $this;
   }
 }
