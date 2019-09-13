@@ -6,7 +6,7 @@ class View
   protected $data = [],
     $template;
 
-  public function assign(string $name, object $value)
+  public function assign(string $name, $value)
   {
     $this->data[$name] = $value;
     return $this;
