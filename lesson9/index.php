@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="main/view/css/style.css">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -39,8 +39,10 @@
       <div class="row">
         <div class="col-sm">
         <h1>About me</h1>
-        <img src="https://picsum.photos/id/1012/500/300" alt="My photo" class="img-fluid"">
-        <p class="aboutMe">One of three columns</p>
+            <img src="https://picsum.photos/id/1012/500/300" alt="My photo" class="img-fluid"">
+            <h3 class="aboutMe">What is Lorem Ipsum?</h3>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
         </div>        
       </div>
     </div>
