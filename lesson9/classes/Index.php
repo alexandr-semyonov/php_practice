@@ -16,7 +16,7 @@ class Index
 
     public function getIndex()
     {
-        return $this->data;
+        return $this->data[0];
     }
     /*
     public function append(GuestBookRecord $record){
