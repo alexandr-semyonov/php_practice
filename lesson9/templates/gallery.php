@@ -46,7 +46,9 @@
   <div class="row">
       <div class="col">
           <ul>
-              <li><img src="img/<?php echo $this->data['gallery']->getIndex()['pictureName'] ?>" alt=""></li>
+              <?php foreach ($this->data['gallery']->getData() as $picture): ?>
+              <li><img src="img/<?php echo $picture['pictureName'] ?>" alt="<?php echo 'picture id=' . $picture['id']?>"></li>
+              <?php endforeach; ?>
           </ul>
       </div>
   </div>

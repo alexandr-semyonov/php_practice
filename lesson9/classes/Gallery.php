@@ -14,9 +14,9 @@ class Gallery
     $this->data = $data;
   }
 
-  public function getIndex()
+  public function getData()
   {
-    return $this->data[0];
+    return $this->data;
   }
 
 }
