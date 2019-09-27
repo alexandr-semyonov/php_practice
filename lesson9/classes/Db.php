@@ -6,7 +6,7 @@ class Db
   protected $dbh;
 
   public function __construct() {
-    $config = require_once __DIR__ . '/../../config.php';
+    $config = require_once __DIR__ . '/../config.php';
     $dsn = 'mysql:host=' . $config['host'] . ';dbname=' . $config['dbname'];
     $this->dbh = new PDO($dsn, $config['user'], $config['password']);
   }
