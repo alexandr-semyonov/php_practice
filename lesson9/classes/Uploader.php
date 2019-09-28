@@ -4,6 +4,8 @@ require_once __DIR__ . '/Db.php';
 
 class Uploader
 {
+    protected $fieldName;
+
     public function __construct($fieldName)
     {
         $this->fieldName = $fieldName;
@@ -20,8 +22,8 @@ class Uploader
                 $uploadDir . $filename
             );
           $db = new Db;
-          $sql = 'SELECT * FROM gallery';
+          $sql = 'INSERT INTO gallery (pictureName) VALUES ('. $filename . ')';
+          $db->execute($sql);
         }
-    }
-    protected $fieldName;
+    }    
 }
