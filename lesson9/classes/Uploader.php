@@ -22,7 +22,7 @@ class Uploader
                 $uploadDir . $filename
             );
           $db = new Db;
-          $sql = 'INSERT INTO gallery (pictureName) VALUES ('. $filename . ')';
+          $sql = "INSERT INTO gallery (pictureName) VALUES ( '$filename' )";
           $db->execute($sql);
         }
     }    
