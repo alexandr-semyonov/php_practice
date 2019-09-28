@@ -45,12 +45,24 @@
   </div>
   <div class="row">
       <div class="col">
-          <ul>
+          <ul class="gallery"
               <?php foreach ($this->data['gallery']->getData() as $picture): ?>
               <li><img src="img/<?php echo $picture['pictureName'] ?>" alt="<?php echo 'picture id=' . $picture['id']?>"></li>
               <?php endforeach; ?>
           </ul>
       </div>
+  </div>
+  <div class="row upload-form">
+    <div class="col">
+      <form
+        action="upload.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="file" name="galleryImg">
+        <button type="submit">Send image</button>
+      </form>
+    </div>
   </div>
 </div>
 

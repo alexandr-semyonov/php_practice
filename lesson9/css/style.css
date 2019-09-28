@@ -10,7 +10,15 @@ li{
   margin: 10px;
 }
 
-img {
+.gallery{
+  margin-top: 20px;
+}
+
+.gallery img {
   width: 200px;
   height: 140px;
+}
+
+.upload-form{
+  margin-top: 20px;
 }
