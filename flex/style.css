@@ -1,9 +1,12 @@
 .container{
   display: flex;
   flex-direction: row;
-  height: 350px;
   justify-content: center;
-  /*align-items: flex-start;*/
+  flex-wrap: wrap;    
+  /*align-items: flex-end;
+  align-content: flex-start;*/
+  max-width: 1200px;
+  margin: 20px auto;
   outline: 1px solid #ccc;  
 }
 .box, .block-box{
@@ -11,14 +14,32 @@
   background-color: bisque;
   outline: 1px solid black;
 }
-.block1{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+
+.header{
+  order: 1;
+  flex-basis: 100%;
 }
-.block-box__menu{
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.menu{
+  order: 2;
+  flex-basis: 100%;
+}
+.sidebar{
+  order: 3;
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+.content{
+  order: 4;
+  flex-basis: 500px;
+  flex-grow: 5;
+}
+.footer{
+  order: 5;
+  flex-basis: 400px;
+  flex-grow: 2;
+}
+.footer2{
+  order: 6;
+  flex-basis: 400px;
+  flex-grow: 2
 }
