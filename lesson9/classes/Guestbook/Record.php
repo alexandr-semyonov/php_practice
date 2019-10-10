@@ -1,7 +1,7 @@
 <?php
 
 
-class GuestBookRecord
+class Record
 {
     protected $message;
     public function __construct($message)

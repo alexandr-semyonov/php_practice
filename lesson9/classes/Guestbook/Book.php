@@ -18,7 +18,7 @@ class Book
         return $this->data;
     }
 
-    public function append(GuestBookRecord $record){
+    public function append(Record $record){
         $this->data[] = $record;
         return $this;
     }

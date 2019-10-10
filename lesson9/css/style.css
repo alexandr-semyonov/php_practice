@@ -30,3 +30,7 @@ li{
 .guestbook__list__item{
   display: block;
 }
+
+textarea {
+  width: 80%;
+}

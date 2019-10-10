@@ -50,6 +50,15 @@
           </ul>
         </div>
       </div>
+      <div class="row">
+        <div class="col-sm">
+          <form action="./append.php" method="post">
+            <textarea name="message"></textarea>
+            <br>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
     </div>    
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
