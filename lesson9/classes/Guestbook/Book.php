@@ -10,10 +10,10 @@ class Book
     public function __construct()
     {
         $db = new Db;
-        $this->data = $db->query('SELECT * FROM guestbook ORDER BY id DESC');
+        $this->data = $db->query('SELECT * FROM guestbook');
     }
 
-    public function getRecords()
+    public function getGuestBook()
     {
         return $this->data;
     }

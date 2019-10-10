@@ -22,3 +22,11 @@ li{
 .upload-form{
   margin-top: 20px;
 }
+
+.guestbook{
+  margin-top: 20px;
+}
+
+.guestbook__list__item{
+  display: block;
+}
