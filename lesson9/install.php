@@ -17,6 +17,15 @@ var_dump($db->execute('CREATE TABLE gallery (
   )'
 ));
 
+var_dump($db->execute('CREATE TABLE guestBook (
+  id SERIAL, 
+  records TEXT
+  )'
+));
+
+var_dump($db->execute( "INSERT INTO guestBook (records) VALUES ('First record in Guestbook!')" ));
+
+
 var_dump($db->execute('INSERT INTO gallery (pictureName)
 VALUES ("1-367x267.jpg");
 '));
