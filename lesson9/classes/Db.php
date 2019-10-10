@@ -15,8 +15,8 @@ class Db
     return $this->dbh;
   }
 
-  public function execute(string $sql){
-    $sth = $this->dbh->prepare($sql);
+  public function execute(string $sql, array $data=[]){
+    //$sth = $this->dbh->prepare($sql);
     return $sth->execute();
   }
 

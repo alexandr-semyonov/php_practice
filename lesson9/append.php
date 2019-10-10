@@ -5,6 +5,6 @@ require_once __DIR__. '/Classes/Guestbook/Record.php';
 $guestBook = new Book();
 $record = new Record($_POST['message']);
 
-$guestBook->append($record)->save();
+$guestBook->save($record);
 
-header('Location: ./');
+//header('Location: ./');
