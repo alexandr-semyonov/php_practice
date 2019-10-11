@@ -18,17 +18,4 @@ class Index
     {
         return $this->data[0];
     }
-    /*
-    public function append(GuestBookRecord $record){
-        $this->data[] = $record;
-        return $this;
-    }
-
-    public function save(){
-        $lines = [];
-        foreach ($this->data as $record){
-            $lines[] = $record->getMessage();
-        }
-        file_put_contents($this->path, implode("\n", $lines));
-    }*/
 }
