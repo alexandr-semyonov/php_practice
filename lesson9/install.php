@@ -23,6 +23,18 @@ var_dump($db->execute('CREATE TABLE guestBook (
   )'
 ));
 
+var_dump($db->execute('CREATE TABLE users (
+  id SERIAL, 
+  login VARCHAR(100),
+  password VARCHAR(100)
+  )'
+));
+
+//User and password
+$sqlRequest = "INSERT INTO users (login, password) VALUES ('admin', :password)";
+$password = password_hash('123456', PASSWORD_DEFAULT);
+var_dump($db->execute( $sqlRequest, [':password' => $password] ));
+
 var_dump($db->execute( "INSERT INTO guestBook (records) VALUES ('First record in Guestbook!')" ));
 
 

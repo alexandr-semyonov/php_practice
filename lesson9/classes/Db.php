@@ -16,7 +16,12 @@ class Db
   }
 
   public function execute(string $sql, array $data=[]){
-    //$sth = $this->dbh->prepare($sql);
+    $sth = $this->dbh->prepare($sql);
+    if ($data){
+      foreach ($data as $paramName => $param){
+        $sth->bindParam($paramName, $param);
+      }
+    }
     return $sth->execute();
   }
 

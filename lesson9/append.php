@@ -7,4 +7,4 @@ $record = new Record($_POST['message']);
 
 $guestBook->save($record);
 
-//header('Location: ./');
+header('Location: ./guestbook.php');
