@@ -34,3 +34,8 @@ li{
 textarea {
   width: 80%;
 }
+
+.footer{
+  margin: 20px auto;
+  outline: 1px solid grey;
+}
